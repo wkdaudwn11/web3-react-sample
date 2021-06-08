@@ -1,46 +1,16 @@
-# Getting Started with Create React App
+# web3-react-sample
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web3jsProvider.tsx
+- redux, react-route처럼 앱 전체를 감싸는 파일. 
+- web3-react를 세팅하기 위한 기본적인 파일 같음.
 
-## Available Scripts
+connector.ts
+- inject 할 네트워크의 chain id값을 들고 있고, 연결 관련 객체를 리턴해주는 파일.
 
-In the project directory, you can run:
+Connect.tsx
+- connector.ts에서 injected 객체를 받은 후 계정(지갑)에 연동(로그인)하는 파일.
+- 연결에 성공했다면 children(Web3jsComponent.tsx)을 보여주고, 나머지 경우엔 연결 버튼을 보여준다.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Web3jsComponent.tsx
+- 계정에 성공적으로 연결되었을 경우에 렌더링 되는 컴포넌트.
+- 연동된 계정의 주소를 화면에 보여준다.
