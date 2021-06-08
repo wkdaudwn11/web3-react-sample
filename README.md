@@ -1,5 +1,7 @@
 # web3-react-sample
 
+원본: https://codesandbox.io/s/web3-react-ethersjs-web3js-example-wgg13?file=/src/App.tsx
+
 Web3jsProvider.tsx
 - redux, react-route처럼 앱 전체를 감싸는 파일. 
 - web3-react를 세팅하기 위한 기본적인 파일 같음.
